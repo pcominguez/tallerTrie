@@ -1,4 +1,4 @@
-#include <gtest/gtest.h>
+#include "gtest-1.8.1/gtest.h"
 #include "../src/string_map.h"
 
 TEST(string_map_test, vacio) {
