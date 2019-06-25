@@ -3,6 +3,7 @@
 
 #include <string>
 #include <vector>
+#include <iostream>
 
 using namespace std;
 
@@ -79,11 +80,16 @@ private:
     struct Nodo {
         vector<Nodo*> siguientes;
         T* definicion;
-        Nodo():definicion(NULL), siguientes(NULL){};
+        Nodo():definicion(NULL){
+            vector<Nodo*> sig(256, NULL);
+            siguientes = sig;
+        };
     };
 
     Nodo* raiz;
     int _size;
+
+    void destructorNodo(Nodo* n);
 };
 
 #include "string_map.hpp"

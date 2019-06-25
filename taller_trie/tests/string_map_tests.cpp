@@ -1,6 +1,13 @@
 #include "gtest-1.8.1/gtest.h"
 #include "../src/string_map.h"
 
+TEST(string_map_test, vacio1) {
+    string_map<int> vacio;
+
+    EXPECT_EQ(vacio.size(), 0);
+}
+
+
 TEST(string_map_test, vacio) {
     string_map<int> vacio;
 
@@ -8,6 +15,14 @@ TEST(string_map_test, vacio) {
     EXPECT_EQ(vacio.count("hola"), 0);
 }
 
+TEST(string_map_test, asignar1) {
+    string_map<int> singleton;
+    singleton["hola"];
+    singleton["holan"];
+    EXPECT_EQ(singleton.size(), 2);
+}
+
+/*
 TEST(string_map_test, asignar) {
     string_map<int> singleton;
     singleton["hola"] = 1;
@@ -222,3 +237,5 @@ int main(int argc, char* argv[]) {
 	testing::InitGoogleTest(&argc, argv);
 	return RUN_ALL_TESTS();
 }
+
+ */
