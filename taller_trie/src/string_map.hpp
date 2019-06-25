@@ -1,14 +1,12 @@
 template <typename T>
-string_map<T>::string_map(){
-    // COMPLETAR
-}
+string_map<T>::string_map():raiz(NULL), _size(0){}
 
 template <typename T>
 string_map<T>::string_map(const string_map<T>& aCopiar) : string_map() { *this = aCopiar; } // Provisto por la catedra: utiliza el operador asignacion para realizar la copia.
 
 template <typename T>
 string_map<T>& string_map<T>::operator=(const string_map<T>& d) {
-    // COMPLETAR
+    // terminado
 }
 
 template <typename T>

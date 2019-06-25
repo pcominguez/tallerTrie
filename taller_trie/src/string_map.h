@@ -2,6 +2,7 @@
 #define STRING_MAP_H_
 
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -78,6 +79,7 @@ private:
     struct Nodo {
         vector<Nodo*> siguientes;
         T* definicion;
+        Nodo():definicion(NULL), siguientes(NULL){};
     };
 
     Nodo* raiz;
