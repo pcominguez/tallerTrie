@@ -6,7 +6,7 @@ string_map<T>::string_map(const string_map<T>& aCopiar) : string_map() { *this =
 
 template <typename T>
 string_map<T>& string_map<T>::operator=(const string_map<T>& d) {
-    // terminado
+
 }
 
 template <typename T>
@@ -28,24 +28,29 @@ void string_map<T>::destructorNodo(Nodo* n){
 
 template <typename T>
 T& string_map<T>::operator[](const string& clave){
+    bool estaba = true;
+    if(count(clave)==0){
+        (this->_size)++;
+        estaba = false;
+    }
     if(raiz==NULL){
         raiz = new Nodo();
     }
-    if(count(clave)==0){
-        (this->_size)++;
-    }
     Nodo* n = raiz;
-    for (int i = 0; i < clave.size()-1; i++){
+    for (int i = 0; i < clave.size(); i++){
         int letra = (int(clave[i]));
         if ((n->siguientes)[letra] == NULL){
             (n->siguientes)[letra] = new Nodo();
             n = (n->siguientes)[letra];
         }else{
             n = (n->siguientes)[letra];
+
         }
     }
-    return (*(n->definicion)
-    );
+    if (!estaba){
+        n->definicion = new T;
+    }
+    return *(n->definicion);
 }
 
 
@@ -65,6 +70,14 @@ int string_map<T>::count(const string& clave) const{
             n = (n->siguientes)[letra];
         }
         i++;
+    }
+    if (i==clave.size()-1){
+        if(n != NULL){
+            esta = 1;
+        }
+    }
+    else if(n != NULL && n->definicion == NULL){
+        esta = 0;
     }
     return esta;
 }

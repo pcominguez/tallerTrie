@@ -1,18 +1,24 @@
 #include "gtest-1.8.1/gtest.h"
 #include "../src/string_map.h"
-
+/*
 TEST(string_map_test, vacio1) {
     string_map<int> vacio;
 
     EXPECT_EQ(vacio.size(), 0);
 }
 
-
 TEST(string_map_test, vacio) {
     string_map<int> vacio;
 
     EXPECT_TRUE(vacio.empty());
     EXPECT_EQ(vacio.count("hola"), 0);
+}
+
+TEST(string_map_test, count) {
+    string_map<int> singleton;
+    EXPECT_EQ(singleton.count("hola"), 0);
+    singleton["hola"];
+    EXPECT_EQ(singleton.count("hola"), 1);
 }
 
 TEST(string_map_test, asignar1) {
@@ -22,7 +28,6 @@ TEST(string_map_test, asignar1) {
     EXPECT_EQ(singleton.size(), 2);
 }
 
-/*
 TEST(string_map_test, asignar) {
     string_map<int> singleton;
     singleton["hola"] = 1;
@@ -30,6 +35,7 @@ TEST(string_map_test, asignar) {
     EXPECT_EQ(singleton["hola"], 1);
     EXPECT_EQ(singleton.size(), 1);
 }
+
 
 TEST(string_map_test, obtener) {
     string_map<int> sin_prefijos;
@@ -97,6 +103,7 @@ TEST(string_map_test, count) {
 	EXPECT_FALSE(con_prefijos.count("cas") == 1);
 	EXPECT_FALSE(con_prefijos.count("caso") == 1);
 }
+*/
 
 TEST(string_map_test, copiar) {
     string_map<int> sin_prefijos;
@@ -147,7 +154,7 @@ TEST(string_map_test, no_aliasing) {
 	ASSERT_FALSE(singleton.count("hare") == 1);
 }
 
-
+/*
 TEST(string_map_test, TrieDeTries) {
     string_map<int> vacio;
     string_map<int> singleton;
