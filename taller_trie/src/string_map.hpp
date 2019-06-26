@@ -89,7 +89,7 @@ const T& string_map<T>::at(const string& clave) const {
 
 template <typename T>
 T& string_map<T>::at(const string& clave) {
-    // COMPLETAR
+    return (this[clave]);   //con o sin *?
 }
 
 template <typename T>
