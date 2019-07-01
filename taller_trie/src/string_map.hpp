@@ -6,6 +6,23 @@ string_map<T>::string_map(const string_map<T>& aCopiar) : string_map() { *this =
 
 template <typename T>
 string_map<T>& string_map<T>::operator=(const string_map<T>& d) {
+    //Lista<T>& Lista<T>::operator=(const Lista<T>& aCopiar) {
+        // Nodo* iterar = (aCopiar._head);
+        Nodo *iterar = d.raiz;
+        //int i=0;
+        int i = 0;
+        //while (i < (aCopiar._length)) {
+        while (i < d._size()) {
+            //(*this).agregarAtras(iterar->_data);
+
+            //iterar = (iterar)->_next;
+            //i++;
+            // }
+        }
+        //int nuevalength = (aCopiar._length);
+        //(this->_length) = nuevalength;
+        //return *this;
+    }
 
 }
 
@@ -16,7 +33,6 @@ string_map<T>::~string_map(){
 
 template <typename T>
 void string_map<T>::destructorNodo(Nodo* n){
-
     if(n != NULL){
         for(int i = 0; i < (n->siguientes).size(); i++){
             destructorNodo((n->siguientes)[i]);
@@ -84,7 +100,7 @@ int string_map<T>::count(const string& clave) const{
 
 template <typename T>
 const T& string_map<T>::at(const string& clave) const {
-    // COMPLETAR
+    return (this[clave]); //no se si hay quecambiar algo?
 }
 
 template <typename T>
@@ -94,7 +110,39 @@ T& string_map<T>::at(const string& clave) {
 
 template <typename T>
 void string_map<T>::erase(const string& clave) {
-    // COMPLETAR
+    Nodo *ultNodo = raiz;
+    Nodo *actNodo = raiz;
+    int l = 0;
+    for (int i = 0; i < clave.size(); i++) {
+        int cantLetras = 0;
+        int letra = (int(clave[i]));
+        for(int j=0; j<(actNodo->siguientes).size(); j++){
+            if((actNodo->siguientes)[j] != NULL){
+                cantLetras ++;
+            }
+        }
+        if (cantLetras > 1) {
+            ultNodo = actNodo;
+            actNodo = (actNodo->siguientes)[letra];
+            l = letra;
+        } else {
+            actNodo = (actNodo->siguientes)[letra];
+        }
+        if(cantLetras == 0){
+            Nodo* borrar = ultNodo;
+            ultNodo[l] = NULL;
+            while(borrar != NULL){
+                ultNodo = borrar;
+                int h = 0;
+                while(ultNodo[h]==NULL){
+                    h++;
+                }
+                borrar = ultNodo[h];
+                delete ultNodo;
+            }
+
+        }
+    }
 }
 
 template <typename T>
