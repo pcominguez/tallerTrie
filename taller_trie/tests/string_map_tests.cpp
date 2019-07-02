@@ -203,7 +203,7 @@ TEST(string_map_test, eraseUnicaClave) {
     EXPECT_FALSE(singleton.count("hola") == 1);
 }
 
-/*
+
 TEST(string_map_test, erase) {
     string_map<int> sin_prefijos;
     string_map<int> con_prefijos;
@@ -239,11 +239,11 @@ TEST(string_map_test, erase) {
     sin_prefijos.erase("adios");
     EXPECT_FALSE(sin_prefijos.count("adios") == 1);
 }
-
+/*
 
 int main(int argc, char* argv[]) {
 	testing::InitGoogleTest(&argc, argv);
 	return RUN_ALL_TESTS();
-}
-*/
+}*/
+
 

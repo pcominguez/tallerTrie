@@ -3,9 +3,9 @@
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
       <config projectName="taller_trie" targetName="correrTests" />
-      <config projectName="taller_trie" targetName="gtest_main" />
-      <config projectName="taller_trie" targetName="correrValgrind" />
       <config projectName="taller_trie" targetName="gtest" />
+      <config projectName="taller_trie" targetName="correrValgrind" />
+      <config projectName="taller_trie" targetName="gtest_main" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -16,7 +16,9 @@
   <component name="ChangeListManager">
     <list default="true" id="365a4d60-0088-4665-9422-aca83d231741" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/string_map.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/string_map.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/string_map.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/string_map.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/string_map_tests.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/string_map_tests.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,8 +36,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/string_map.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-915">
-              <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+            <state relative-caret-position="296">
+              <caret line="92" column="3" selection-start-line="92" selection-start-column="3" selection-end-line="92" selection-end-column="3" />
               <folding>
                 <element signature="e#45#62#0" expanded="true" />
               </folding>
@@ -46,13 +48,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/string_map.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="127" column="28" selection-start-line="127" selection-start-column="28" selection-end-line="127" selection-end-column="28" />
+            <state relative-caret-position="-105">
+              <caret line="134" selection-start-line="134" selection-end-line="134" />
               <folding>
                 <element signature="e#9#21#0" expanded="true" />
                 <element signature="e#281#293#0" expanded="true" />
                 <element signature="e#2531#2543#0" expanded="true" />
-                <element signature="e#3623#3635#0" expanded="true" />
+                <element signature="e#3677#3689#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -61,11 +63,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/string_map_tests.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="194" column="40" selection-start-line="194" selection-start-column="40" selection-end-line="194" selection-end-column="40" />
+            <state relative-caret-position="119">
+              <caret line="219" selection-start-line="219" selection-end-line="219" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/gtest-1.8.1/gtest-all.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="4266" selection-start-line="4266" selection-end-line="4266" />
             </state>
           </provider>
         </entry>
@@ -78,8 +89,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/tests/string_map_tests.cpp" />
         <option value="$PROJECT_DIR$/src/string_map.h" />
+        <option value="$PROJECT_DIR$/tests/string_map_tests.cpp" />
         <option value="$PROJECT_DIR$/src/string_map.hpp" />
       </list>
     </option>
@@ -188,7 +199,8 @@
       <workItem from="1561559389224" duration="8411000" />
       <workItem from="1562023153396" duration="67000" />
       <workItem from="1562023398036" duration="200000" />
-      <workItem from="1562023707158" duration="7301000" />
+      <workItem from="1562023707158" duration="8670000" />
+      <workItem from="1562080015379" duration="7081000" />
     </task>
     <task id="LOCAL-00001" summary="arrancando">
       <created>1561483651533</created>
@@ -218,43 +230,50 @@
       <option name="project" value="LOCAL" />
       <updated>1562073781922</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="erase distinto a cami">
+      <created>1562073974855</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1562073974855</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="correrTests - 2019.06.26 at 13h 37m 51s.xml">
+    <history-entry file="correrTests - 2019.07.02 at 13h 46m 19s.xml">
       <configuration name="correrTests" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="correrTests - 2019.06.26 at 13h 38m 07s.xml">
+    <history-entry file="correrTests - 2019.07.02 at 13h 48m 50s.xml">
       <configuration name="correrTests" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="correrTests - 2019.06.26 at 13h 38m 35s.xml">
+    <history-entry file="correrTests - 2019.07.02 at 14h 46m 13s.xml">
       <configuration name="correrTests" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="correrTests - 2019.06.26 at 13h 38m 38s.xml">
+    <history-entry file="correrTests - 2019.07.02 at 14h 50m 40s.xml">
       <configuration name="correrTests" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="correrTests - 2019.06.26 at 13h 39m 02s.xml">
+    <history-entry file="correrTests - 2019.07.02 at 14h 50m 58s.xml">
       <configuration name="correrTests" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="correrTests - 2019.06.26 at 13h 41m 54s.xml">
+    <history-entry file="correrTests - 2019.07.02 at 14h 51m 48s.xml">
       <configuration name="correrTests" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="correrTests - 2019.07.01 at 20h 39m 37s.xml">
+    <history-entry file="correrTests - 2019.07.02 at 14h 53m 28s.xml">
       <configuration name="correrTests" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="correrTests - 2019.07.01 at 23h 17m 51s.xml">
+    <history-entry file="correrTests - 2019.07.02 at 14h 57m 21s.xml">
       <configuration name="correrTests" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="correrTests - 2019.07.01 at 23h 18m 12s.xml">
+    <history-entry file="correrTests - 2019.07.02 at 14h 57m 32s.xml">
       <configuration name="correrTests" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="correrTests - 2019.07.02 at 10h 25m 36s.xml">
+    <history-entry file="correrTests - 2019.07.02 at 15h 01m 39s.xml">
       <configuration name="correrTests" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27609000" />
+    <option name="totallyTimeSpent" value="36059000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="728" extended-state="6" />
@@ -265,8 +284,8 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32969433" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3995633" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3289256" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3983471" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -292,6 +311,22 @@
     <MESSAGE value="erase distinto a cami" />
     <option name="LAST_COMMIT_MESSAGE" value="erase distinto a cami" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/string_map.hpp</url>
+          <line>112</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/tests/string_map_tests.cpp</url>
+          <line>218</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
@@ -302,24 +337,10 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///usr/include/c++/7/bits/stl_vector.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="797" selection-start-line="797" selection-end-line="797" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/gtest-1.8.1/gtest.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
           <caret line="8356" selection-start-line="8356" selection-end-line="8356" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/gtest-1.8.1/gtest-all.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="4266" selection-start-line="4266" selection-end-line="4266" />
         </state>
       </provider>
     </entry>
@@ -330,35 +351,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/string_map_tests.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="194" column="40" selection-start-line="194" selection-start-column="40" selection-end-line="194" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/string_map.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-915">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+        <state relative-caret-position="296">
+          <caret line="92" column="3" selection-start-line="92" selection-start-column="3" selection-end-line="92" selection-end-column="3" />
           <folding>
             <element signature="e#45#62#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file:///usr/include/c++/7/bits/stl_vector.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="797" selection-start-line="797" selection-end-line="797" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/gtest-1.8.1/gtest-all.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="4266" selection-start-line="4266" selection-end-line="4266" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/string_map_tests.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="219" selection-start-line="219" selection-end-line="219" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/string_map.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="127" column="28" selection-start-line="127" selection-start-column="28" selection-end-line="127" selection-end-column="28" />
+        <state relative-caret-position="-105">
+          <caret line="134" selection-start-line="134" selection-end-line="134" />
           <folding>
             <element signature="e#9#21#0" expanded="true" />
             <element signature="e#281#293#0" expanded="true" />
             <element signature="e#2531#2543#0" expanded="true" />
-            <element signature="e#3623#3635#0" expanded="true" />
+            <element signature="e#3677#3689#0" expanded="true" />
           </folding>
         </state>
       </provider>

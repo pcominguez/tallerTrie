@@ -90,8 +90,8 @@ private:
     int _size;
 
     void destructorNodo(Nodo* n);
-    int buscarLetras(Nodo* n) const;
     void borrarLista(Nodo* n) const ;
+    int buscarLetras(Nodo* n) const;
 };
 
 #include "string_map.hpp"

@@ -37,6 +37,7 @@ void string_map<T>::destructorNodo(Nodo* n){
         for(int i = 0; i < (n->siguientes).size(); i++){
             destructorNodo((n->siguientes)[i]);
         }
+        delete(n->definicion);
         delete(n);
     }
 
@@ -112,7 +113,7 @@ template <typename T>
 void string_map<T>::erase(const string& clave) {
     Nodo *ultNodo = raiz;
     Nodo *actNodo = raiz;
-    int l = 0;
+    int l = clave[0];
     for(int i = 0; i < clave.size(); i++) {
         int letra = (int(clave[i]));
         if (buscarLetras(actNodo) > 1) {
@@ -124,12 +125,32 @@ void string_map<T>::erase(const string& clave) {
         }
     }
     if(buscarLetras(actNodo) == 0){
-        Nodo* borrar = ultNodo;
+        Nodo* borrar = (ultNodo->siguientes)[l];
         (ultNodo->siguientes)[l] = NULL;
-        borrarLista(borrar);
+        destructorNodo(borrar);
+    }else{
+        delete(actNodo->definicion);
     }
+    (this->_size)--;
 }
 
+//esta funcion de abajo era una idea inicial pero el destructor anda mucho mejor. creo
+/*template <typename T>
+void string_map<T>::borrarLista(Nodo* n) const {
+    Nodo* tmp;
+    while (n != NULL){
+        int i = 0;
+        while( (n->siguientes)[i]==NULL){
+            i++;
+        }
+        tmp = (n->siguientes)[i];
+        //n->definicion = NULL;
+        //delete(n->definicion);
+        destructorNodo(n);
+        n = tmp;
+    }
+}
+*/
 template <typename T>
 int string_map<T>::buscarLetras(Nodo* n) const {
     int cantLetras = 0;
@@ -139,21 +160,6 @@ int string_map<T>::buscarLetras(Nodo* n) const {
         }
     }
     return cantLetras;
-}
-
-template <typename T>
-void string_map<T>::borrarLista(Nodo* n) const {
-    Nodo* tmp;
-    while (n != NULL){
-        int i = 0;
-        while( (n->siguientes)[i]==NULL){
-            i++;
-        }
-        tmp = (n->siguientes)[i];
-        delete n->definicion;
-        delete n;
-        n = tmp;
-    }
 }
 
 
