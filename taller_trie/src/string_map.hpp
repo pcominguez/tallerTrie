@@ -6,22 +6,6 @@ string_map<T>::string_map(const string_map<T>& aCopiar) : string_map() { *this =
 
 template <typename T>
 string_map<T>& string_map<T>::operator=(const string_map<T>& d) {
-    //Lista<T>& Lista<T>::operator=(const Lista<T>& aCopiar) {
-        // Nodo* iterar = (aCopiar._head);
-        Nodo *iterar = d.raiz;
-        //int i=0;
-        int i = 0;
-        //while (i < (aCopiar._length)) {
-        while (i < d._size()) {
-            //(*this).agregarAtras(iterar->_data);
-
-            //iterar = (iterar)->_next;
-            //i++;
-            // }
-        }
-        //int nuevalength = (aCopiar._length);
-        //(this->_length) = nuevalength;
-        //return *this;
 }
 
 
@@ -115,7 +99,7 @@ T& string_map<T>::at(const string& clave) {
     return (this[clave]);   //con o sin *?
 }
 
-// version erase de cami (anda muy bien)
+// version erase de cami pasa los tests pero pierde memoria
 /*
 template <typename T>
 void string_map<T>::erase(const string& clave) {
@@ -185,8 +169,8 @@ void string_map<T>::erase(const string& clave) {
         (ultNodo->siguientes)[l] = NULL;
         destructorNodo(borrar);
     }else{
-        actNodo->definicion = NULL;                 //no me queda claro porque esta linea es necesaria
         delete(actNodo->definicion);
+        actNodo->definicion = NULL;                 //no me queda claro porque esta linea es necesaria
     }
     (this->_size)--;
 }

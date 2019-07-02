@@ -190,8 +190,8 @@ TEST(string_map_test, TrieDeTries) {
 	EXPECT_EQ(dicc_dicc["con_prefijos"]["casa"], 2);
 	EXPECT_EQ(dicc_dicc["con_prefijos"]["casona"], 3);
 
-}*/
-
+}
+*/
 TEST(string_map_test, eraseUnicaClave) {
     string_map<int> singleton;
     singleton["hola"] = 1;
