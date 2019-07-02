@@ -71,7 +71,7 @@ TEST(string_map_test, redefinir) {
     EXPECT_EQ(con_prefijos["c"], 3);
 }
 
-TEST(string_map_test, count) {
+TEST(string_map_test, count2) {
     string_map<int> vacio;
     string_map<int> sin_prefijos;
     string_map<int> con_prefijos;
