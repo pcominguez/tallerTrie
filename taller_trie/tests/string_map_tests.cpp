@@ -71,7 +71,7 @@ TEST(string_map_test, redefinir) {
     EXPECT_EQ(con_prefijos["c"], 3);
 }
 
-TEST(string_map_test, count) {
+TEST(string_map_test, count2) {
     string_map<int> vacio;
     string_map<int> sin_prefijos;
     string_map<int> con_prefijos;
@@ -102,9 +102,9 @@ TEST(string_map_test, count) {
 	EXPECT_FALSE(con_prefijos.count("ca") == 1);
 	EXPECT_FALSE(con_prefijos.count("cas") == 1);
 	EXPECT_FALSE(con_prefijos.count("caso") == 1);
-}
+}*/
  //hasta aca anda
-*/
+
 /*
 TEST(string_map_test, copiar) {
     string_map<int> sin_prefijos;
@@ -190,8 +190,8 @@ TEST(string_map_test, TrieDeTries) {
 	EXPECT_EQ(dicc_dicc["con_prefijos"]["casa"], 2);
 	EXPECT_EQ(dicc_dicc["con_prefijos"]["casona"], 3);
 
-}
-*/
+}*/
+
 TEST(string_map_test, eraseUnicaClave) {
     string_map<int> singleton;
     singleton["hola"] = 1;
@@ -203,7 +203,7 @@ TEST(string_map_test, eraseUnicaClave) {
     EXPECT_FALSE(singleton.count("hola") == 1);
 }
 
-
+/*
 TEST(string_map_test, erase) {
     string_map<int> sin_prefijos;
     string_map<int> con_prefijos;
@@ -245,5 +245,5 @@ int main(int argc, char* argv[]) {
 	testing::InitGoogleTest(&argc, argv);
 	return RUN_ALL_TESTS();
 }
-
+*/
 

@@ -22,9 +22,9 @@ string_map<T>& string_map<T>::operator=(const string_map<T>& d) {
         //int nuevalength = (aCopiar._length);
         //(this->_length) = nuevalength;
         //return *this;
-    }
-
 }
+
+
 
 template <typename T>
 string_map<T>::~string_map(){
@@ -113,37 +113,49 @@ void string_map<T>::erase(const string& clave) {
     Nodo *ultNodo = raiz;
     Nodo *actNodo = raiz;
     int l = 0;
-    for (int i = 0; i < clave.size(); i++) {
-        int cantLetras = 0;
+    for(int i = 0; i < clave.size(); i++) {
         int letra = (int(clave[i]));
-        for(int j=0; j<(actNodo->siguientes).size(); j++){
-            if((actNodo->siguientes)[j] != NULL){
-                cantLetras ++;
-            }
-        }
-        if (cantLetras > 1) {
+        if (buscarLetras(actNodo) > 1) {
             ultNodo = actNodo;
             actNodo = (actNodo->siguientes)[letra];
             l = letra;
         } else {
             actNodo = (actNodo->siguientes)[letra];
         }
-        if(cantLetras == 0){
-            Nodo* borrar = ultNodo;
-            ultNodo[l] = NULL;
-            while(borrar != NULL){
-                ultNodo = borrar;
-                int h = 0;
-                while(ultNodo[h]==NULL){
-                    h++;
-                }
-                borrar = ultNodo[h];
-                delete ultNodo;
-            }
-
-        }
+    }
+    if(buscarLetras(actNodo) == 0){
+        Nodo* borrar = ultNodo;
+        ultNodo[l] = NULL;
+        borrarLista(borrar);
     }
 }
+
+template <typename T>
+int string_map<T>::buscarLetras(Nodo* n) const {
+    int cantLetras = 0;
+    for(int j=0; j<(n->siguientes).size(); j++){
+        if((n->siguientes)[j] != NULL){
+            cantLetras ++;
+        }
+    }
+    return cantLetras;
+}
+
+template <typename T>
+void string_map<T>::borrarLista(Nodo* n) const {
+    Nodo* tmp;
+    while (n != NULL){
+        int i = 0;
+        while( (n->siguientes)[i]==NULL){
+            i++;
+        }
+        tmp = (n->siguientes)[i];
+        delete n->definicion;
+        delete n;
+        n = tmp;
+    }
+}
+
 
 template <typename T>
 int string_map<T>::size() const{
