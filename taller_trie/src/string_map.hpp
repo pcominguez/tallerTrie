@@ -125,7 +125,7 @@ void string_map<T>::erase(const string& clave) {
     }
     if(buscarLetras(actNodo) == 0){
         Nodo* borrar = ultNodo;
-        ultNodo[l] = NULL;
+        (ultNodo->siguientes)[l] = NULL;
         borrarLista(borrar);
     }
 }
