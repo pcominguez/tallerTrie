@@ -1,6 +1,6 @@
 #include "gtest-1.8.1/gtest.h"
 #include "../src/string_map.h"
-/*
+
 TEST(string_map_test, vacio1) {
     string_map<int> vacio;
 
@@ -102,7 +102,7 @@ TEST(string_map_test, count2) {
 	EXPECT_FALSE(con_prefijos.count("ca") == 1);
 	EXPECT_FALSE(con_prefijos.count("cas") == 1);
 	EXPECT_FALSE(con_prefijos.count("caso") == 1);
-}*/
+}
  //hasta aca anda
 
 /*
@@ -239,11 +239,11 @@ TEST(string_map_test, erase) {
     sin_prefijos.erase("adios");
     EXPECT_FALSE(sin_prefijos.count("adios") == 1);
 }
-/*
+
 
 int main(int argc, char* argv[]) {
 	testing::InitGoogleTest(&argc, argv);
 	return RUN_ALL_TESTS();
-}*/
+}
 
 
