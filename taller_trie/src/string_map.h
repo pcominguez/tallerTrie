@@ -90,6 +90,10 @@ private:
     int _size;
 
     void destructorNodo(Nodo* n);
+    int buscarLetras(Nodo* n) const;
+    //int cantCaminos(Nodo* n) const;   //version cami
+    //bool esHoja(Nodo* n) const;       //version cami
+    void copyRecursivo(Nodo* destino, Nodo* fuente);
 };
 
 #include "string_map.hpp"

@@ -20,9 +20,11 @@ TEST(string_map_test, asignar1) {
     singleton["hola"];
     singleton["holan"];
     EXPECT_EQ(singleton.size(), 2);
+	//string_map<int> copia(singleton);
+
 }
 
-/*
+
 TEST(string_map_test, asignar) {
     string_map<int> singleton;
     singleton["hola"] = 1;
@@ -97,6 +99,7 @@ TEST(string_map_test, count) {
 	EXPECT_FALSE(con_prefijos.count("cas") == 1);
 	EXPECT_FALSE(con_prefijos.count("caso") == 1);
 }
+
 
 TEST(string_map_test, copiar) {
     string_map<int> sin_prefijos;
@@ -238,4 +241,4 @@ int main(int argc, char* argv[]) {
 	return RUN_ALL_TESTS();
 }
 
- */
+
