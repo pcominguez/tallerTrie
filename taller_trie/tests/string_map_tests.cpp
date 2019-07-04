@@ -7,6 +7,7 @@ TEST(string_map_test, vacio1) {
     EXPECT_EQ(vacio.size(), 0);
 }
 
+
 TEST(string_map_test, vacio) {
     string_map<int> vacio;
 
@@ -14,19 +15,15 @@ TEST(string_map_test, vacio) {
     EXPECT_EQ(vacio.count("hola"), 0);
 }
 
-TEST(string_map_test, count) {
-    string_map<int> singleton;
-    EXPECT_EQ(singleton.count("hola"), 0);
-    singleton["hola"];
-    EXPECT_EQ(singleton.count("hola"), 1);
-}
-
 TEST(string_map_test, asignar1) {
     string_map<int> singleton;
     singleton["hola"];
     singleton["holan"];
     EXPECT_EQ(singleton.size(), 2);
+	//string_map<int> copia(singleton);
+
 }
+
 
 TEST(string_map_test, asignar) {
     string_map<int> singleton;
@@ -35,7 +32,6 @@ TEST(string_map_test, asignar) {
     EXPECT_EQ(singleton["hola"], 1);
     EXPECT_EQ(singleton.size(), 1);
 }
-
 
 TEST(string_map_test, obtener) {
     string_map<int> sin_prefijos;
@@ -71,7 +67,7 @@ TEST(string_map_test, redefinir) {
     EXPECT_EQ(con_prefijos["c"], 3);
 }
 
-TEST(string_map_test, count2) {
+TEST(string_map_test, count) {
     string_map<int> vacio;
     string_map<int> sin_prefijos;
     string_map<int> con_prefijos;
@@ -103,9 +99,8 @@ TEST(string_map_test, count2) {
 	EXPECT_FALSE(con_prefijos.count("cas") == 1);
 	EXPECT_FALSE(con_prefijos.count("caso") == 1);
 }
- //hasta aca anda
 
-/*
+
 TEST(string_map_test, copiar) {
     string_map<int> sin_prefijos;
     string_map<int> con_prefijos;
@@ -154,8 +149,8 @@ TEST(string_map_test, no_aliasing) {
 	copia["hare"] =  2;
 	ASSERT_FALSE(singleton.count("hare") == 1);
 }
-*/
-/*
+
+
 TEST(string_map_test, TrieDeTries) {
     string_map<int> vacio;
     string_map<int> singleton;
@@ -191,7 +186,7 @@ TEST(string_map_test, TrieDeTries) {
 	EXPECT_EQ(dicc_dicc["con_prefijos"]["casona"], 3);
 
 }
-*/
+
 TEST(string_map_test, eraseUnicaClave) {
     string_map<int> singleton;
     singleton["hola"] = 1;

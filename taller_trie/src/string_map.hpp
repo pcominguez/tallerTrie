@@ -6,8 +6,35 @@ string_map<T>::string_map(const string_map<T>& aCopiar) : string_map() { *this =
 
 template <typename T>
 string_map<T>& string_map<T>::operator=(const string_map<T>& d) {
+    this->~string_map();
+    this->raiz = new Nodo();
+    this->_size = 0;
+    //string_map(*this);
+
+    this->_size = d._size;
+    //*(this->raiz) = d.raiz;
+    if(d.raiz != NULL){
+        copyRecursivo((this->raiz), (d.raiz));
+
+    }
 }
 
+template <typename T>
+void string_map<T>::copyRecursivo(Nodo* destino, Nodo* fuente){
+    if(fuente->definicion != NULL){
+        destino->definicion = new T;
+        *(destino->definicion) = *(fuente->definicion);
+    }
+
+    destino->siguientes = fuente->siguientes;
+    for(int i = 0; i < (fuente->siguientes).size(); i++){
+        if((fuente->siguientes)[i] != NULL){
+            Nodo* n = new Nodo();
+            destino->siguientes[i] = n;
+            copyRecursivo((destino->siguientes)[i], (fuente->siguientes)[i]);
+        }
+    }
+}
 
 
 template <typename T>
