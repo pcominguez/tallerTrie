@@ -1,6 +1,0 @@
-/home/vmarquez/Documents/Algo2/algo2_talleres/tallerTrie/taller_trie/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/vmarquez/Documents/Algo2/algo2_talleres/tallerTrie/taller_trie/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/vmarquez/Documents/Algo2/algo2_talleres/tallerTrie/taller_trie/cmake-build-debug/CMakeFiles/gtest.dir
-/home/vmarquez/Documents/Algo2/algo2_talleres/tallerTrie/taller_trie/cmake-build-debug/CMakeFiles/correrTests.dir
-/home/vmarquez/Documents/Algo2/algo2_talleres/tallerTrie/taller_trie/cmake-build-debug/CMakeFiles/gtest_main.dir
-/home/vmarquez/Documents/Algo2/algo2_talleres/tallerTrie/taller_trie/cmake-build-debug/CMakeFiles/correrValgrind.dir
